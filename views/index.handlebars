@@ -1,30 +1,51 @@
-<h1>Eat-Da-Burger</h1>
+<title>
+    <h1>Eat-Da-Burger</h1>
+</title>
 
-<h2>What burger would you like to eat?</h2>
+<div id="sub-title">
+    <h2>What burger would you like to eat?</h2>
+</div>
 
-<h2>Burgers Ready to E.A.T.!</h2>
-<ul>
-    {{#each burgers}}
-        {{> burgers/burger-block}}
-    {{/each}}
-</ul>
+<div id="ready-column">
+    <h2>Burgers Ready to E.A.T.!</h2>
+    <ul>
+        {{#each burgers}}
+            {{#unless devoured}}
+                {{> burgers/burger-block devoured=false}}
+            {{/unless}}
+        {{/each}}
+    </ul>
+</div>
 
-<h2>Add a burger</h2>
-<form id="add-form">
+<div id="devoured-column">
+<h2>Burgers Consumed</h2>
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
-    <div class="form-group">
-        <label for="bu">Burger Name:</label>
-        <input type="text" id="bu" name="name">
-    </div>
+<div id="add-burger-column">
+    <h2>Add a burger</h2>
+    <form id="add-form">
 
-    <div class="form-group">
-        <label for="de">Devoured?</label><br>
-        <input type="radio" name="devoured" value="1" id="devoured" checked>Devoured<br>
-        <input type="radio" name="devoured" value="0">Ready to be eaten
-    </div>
+        <div class="form-group">
+            <label for="burg">Burger Name:</label>
+            <input type="text" id="burg" name="name">
+        </div>
 
-{{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
-    <button type="submit">Add Burger</button>
-</form>
+        <div class="form-group">
+            <label for="de">Devoured?</label><br>
+            <input type="radio" name="devoured" value="1" checked id="devoured">Devoured!<br>
+            <input type="radio" name="devoured" value="0" id="ready">Ready to be eaten
+        </div>
+
+    {{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
+        <button type="submit">Add Burger</button>
+    </form>
+</div>
 
 

@@ -1,6 +1,5 @@
 // Set up MySQL connection
 const mysql = require('mysql');
-const { use } = require('../controllers/burger_controller');
 
 const connection = mysql.createConnection({
   host: 'localhost',

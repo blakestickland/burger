@@ -8,11 +8,11 @@ const burger = {
     },
     // TODO explore create 'definition' below
     // The variables cols and vals are arrays.
-    create(cols, vals, cb) {
-        orm.create('burgers', cols, vals, (res) => cb(res));
+    insertOne(cols, vals, cb) {
+        orm.insertOne('burgers', cols, vals, (res) => cb(res));
     },
-    update(objColVals, condition, cb) {
-        orm.update('burgers', objColVals, condition, (res) => cb(res));
+    updateOne(objColVals, condition, cb) {
+        orm.updateOne('burgers', objColVals, condition, (res) => cb(res));
     }
 }
 

@@ -2,9 +2,10 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. Follows the MVC design pattern; uses Node and MYSL to query and route data in the app, and Handlebars to generate the HTML.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "watch": "nodemon server.js"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "express-handlebars": "^5.2.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
   }
 }

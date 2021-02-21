@@ -1,8 +1,4 @@
-const express = require("express");
-const exphbs = require('express-handlebars');
-
-// Import routes.
-const routes = require('./controllers/burger_controller.js');
+const express = require('express');
 
 // Set PORT; dynamic for deployment to Heroku.
 const PORT = process.env.PORT || 3000;
@@ -17,9 +13,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
+const exphbs = require('express-handlebars');
+
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+// Import routes.
+const routes = require('./controllers/burger_controller.js');
 
 // Give the server access to them.
 app.use(routes);
