@@ -1,4 +1,6 @@
+// Set up MySQL connection
 const mysql = require('mysql');
+const { use } = require('../controllers/burger_controller');
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -17,7 +19,5 @@ connection.connect((err) => {
   console.log(`connected as id ${connection.threadId}`);
 });
 
+// Export connection for our ORM to use.
 module.exports = connection;
-
-
-// referenceToFile.query
