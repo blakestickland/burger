@@ -81,5 +81,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 location.reload();
             });
         });
-    }
+    };
+
+//      // DELETE
+//   // Get the button
+//   const deletePlanBtns = document.querySelectorAll('.delplan')
+
+//   // Set up the event listeners for each delete button
+//   deletePlanBtns.forEach(button => {
+//     button.addEventListener('click', (e) => {
+//       const id = e.target.getAttribute('data-planid')
+//       console.log("delete plan id", id)
+
+//       // Send the delete request
+//       fetch(`/api/plans/${id}`, {
+//         method: 'DELETE',
+//       }).then(() => {
+//         console.log(`Deleted ID: ${id}`)
+
+//         // Reload the page
+//         location.reload()
+//       });
+//     });
+//   });
 });

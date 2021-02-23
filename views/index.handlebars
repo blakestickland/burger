@@ -1,14 +1,17 @@
 {{!-- <div class="grid-container"> --}}
+<div class="main-container">
+
     <div class="header row">
         <h1>Eat-Da-Burger</h1>
-        <img src="/assets/img/burger.png" alt="Burger illustration graphic" style="width:100px;height:120px;">
+        {{!-- <img src="/assets/img/burger.png" alt="Burger illustration graphic" style="width:100px;height:100px;"> --}}
+        <img src="/assets/img/burger-giphy.gif" alt="Burger illustration graphic" style="width:100px;height:100px;">
         <div id="sub-title">
             <h2>What burger would you like to eat?</h2>
         </div>
     </div>
 
-    <div class="row">
-        <div class="column">
+    <div class="row" id="main-row">
+        <div class="col-6">
             <h2 class="column-heading">Burgers Ready to E.A.T.!</h2>
             <ul>
                 {{#each burgers}}
@@ -18,9 +21,9 @@
                 {{/each}}
             </ul>
         </div>
-
-        <div class="column">
-        <h2 class="column-heading">Burgers Consumed</h2>
+        
+        <div class="col-6">
+            <h2 class="column-heading">Burgers Consumed</h2>
             <ul>
                 {{#each burgers}}
                     {{#if devoured}}
@@ -30,6 +33,7 @@
             </ul>
         </div>
     </div>
+
 
     <div class="footer row" id="add-burger-column">
         <h2>Add a burger</h2>
