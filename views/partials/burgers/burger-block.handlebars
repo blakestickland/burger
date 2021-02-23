@@ -1,21 +1,21 @@
-    <div class="row">
-        <div class="col-8 burger-name-col">
-            <li>    
-                {{burger_name}}
-             </li>
-        </div>
-
-        <div class="col-4 consume-prepare-btn">
-            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-                {{#if devoured}}
-                    PREPARE BURGER!!
-                    {{else}}
-                    DEVOUR ME!!
-                {{/if}}
-            </button>
-            {{!-- <button data-id="{{id}}" class="delplan">
-                Delete Plan!
-            </button> --}}
-
-        </div>
+<div class="row">
+    <div class="col-8 burger-name-col">
+        <li>    
+            {{burger_name}}
+            </li>
     </div>
+
+    <div class="col-4 consume-prepare-btn">
+        <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+            {{#if devoured}}
+                EAT AGAIN ?
+                {{else}}
+                DEVOUR ME!!
+            {{/if}}
+        </button>
+        <button data-id="{{id}}" class="delplan">
+            Delete!
+        </button>
+
+    </div>
+</div>

@@ -27,6 +27,11 @@ body {
   height: 100%; /* Should be removed. Only for demonstration */
 }
 
+#main-row {
+  margin: auto;
+  width: fit-content;
+}
+
 .column-heading {
   text-align: center;
 }
@@ -66,6 +71,12 @@ li {
   
   .label {
     font-weight: bold;
+  }
+
+  .delplan {
+    color: cornsilk;
+    background-color: rgb(220, 10, 52);
+    border: darkblue;
   }
   
   .create-update-form {

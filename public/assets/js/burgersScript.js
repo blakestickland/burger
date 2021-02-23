@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
                 if(newDevoured === 'true'){
                     newDevoured = false;
-                }else {
+                } else {
                     newDevoured = true;
                 }
 
@@ -83,25 +83,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     };
 
-//      // DELETE
-//   // Get the button
-//   const deletePlanBtns = document.querySelectorAll('.delplan')
+     // DELETE
+  // Get the button
+  const deletePlanBtns = document.querySelectorAll('.delplan')
 
-//   // Set up the event listeners for each delete button
-//   deletePlanBtns.forEach(button => {
-//     button.addEventListener('click', (e) => {
-//       const id = e.target.getAttribute('data-planid')
-//       console.log("delete plan id", id)
+  // Set up the event listeners for each delete button
+  deletePlanBtns.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.getAttribute('data-id');
+      console.log("delete id", id);
 
-//       // Send the delete request
-//       fetch(`/api/plans/${id}`, {
-//         method: 'DELETE',
-//       }).then(() => {
-//         console.log(`Deleted ID: ${id}`)
-
-//         // Reload the page
-//         location.reload()
-//       });
-//     });
-//   });
+      // Send the delete request
+      fetch(`/api/burgers/${id}`, {
+        method: 'DELETE',
+      }).then(() => {
+            console.log(`Deleted ID: ${id}`)
+    
+            // Reload the page
+            location.reload()
+      });
+    });
+  });
 });
