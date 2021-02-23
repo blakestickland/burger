@@ -5,7 +5,7 @@
   
 
   <!-- Description of the project -->
-  An web-based burger logger. Created with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Follows hte MV Cdesign pattern; uses Node and MySQL to query and route data in the app and Handlebars to generate the HTML. Data is rendered in HTML from a database stored on a server.
+  An web-based burger logger. Created with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Follows hte MVC design pattern; uses Node and MySQL to query and route data in the app and Handlebars to generate the HTML. Data is rendered in HTML from a database stored on a server.
 
   ## Link to the Deployed App
   [Link to the deployed Eat-da-Burger app](https://mysterious-caverns-48540.herokuapp.com/)
