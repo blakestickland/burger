@@ -9,6 +9,9 @@
 
   ## Link to the Deployed App
 
+  ## Link to Github repo
+  [Link to Github repo for Eat-da-Burger app](https://github.com/blakestickland/burger.git)
+
   
   ## Table of Contents
   * [Installation](#installation)
